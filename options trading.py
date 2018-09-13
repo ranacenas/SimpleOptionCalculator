@@ -1,20 +1,20 @@
 
 def total_cost_of_trade(x, y):         #For options trading 
-    cost = (x*y*100)+ 4.95 + (0.75*y)
+    cost = (x*y*100)+ 9.95 + (1.0*y)
     return cost                     #x = price of contract y=number of contracts
 #to be continued: create algorithm for desired profits, what price to sell at,
 #predicting future stock prices
 
 def return_cost(x,y):
-    ret = (x*y*100) - 4.95 - (0.75*y)
+    ret = (x*y*100) - 9.95 - (1.0*y)
     return ret
 
 def profit_prediction(x, y, z):   #z= current price of contract
-    profit = ((z-x)*y*100)-4.95-(y*0.75)
+    profit = ((z-x)*y*100)-9.95-(y*1.0)
     return profit
 
 def contractcom(f):
-    com = 4.95+ (f * 0.75)
+    com = 9.95+ (f * 1.0)
     return float(com)
 
 if __name__=='__main__':
@@ -24,17 +24,19 @@ if __name__=='__main__':
     
   
     while count < tries:
-        setting = input('enter pd or pp ')
+        setting = input('enter pd (price diff) or pp (profit prediction) ')
         if setting == 'pd':
             p1 = input('What is the price of the option? ')
             p2 = input('What is the price you want to get out ')
             numcon = input('How many contracts?')
-
-            price1 = total_cost_of_trade((float(p1)), (float(numcon)))
-            price2 = return_cost((float(p2)), (float(numcon)))
-            print( price2 - price1)
-            print (price1)
-            print(price2)
+            situations = [1, 2, 3, 4, 5]
+            
+            for i in situations:
+                price1 = total_cost_of_trade((float(p1)), (float(numcon)))
+                price2 = return_cost((float(p2)), (float(numcon)))
+                print( price2 - price1)
+                print (price1)
+                print(price2)
             
         if setting == 'pp':
             
