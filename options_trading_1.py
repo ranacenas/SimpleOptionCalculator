@@ -3,7 +3,7 @@
 com_base = 9.95 #Base commission
 com_per = 1.00 #Commission per contract
 numcon_pd = [1, 2, 4, 10] #Number of contracts
-
+profit_goals = [50, 100, 150, 200] #Money you want to make scenarios
 
 #DO NOT CHANGE
 def total_cost_of_trade(price, num_of_contracts):         #For options trading 
@@ -56,7 +56,6 @@ if __name__=='__main__':
 			    break
 		    des = input('How much money do you want to make? ')
 		    numcon = input('How many contracts?')
-		    profit_goals = [25, 50, 75, 100]
 
 		    p = total_cost_of_trade((float(potential)), (float(numcon)))
 		    beven = (float(p)+ contractcom(float(numcon)))/(float(numcon)*100)
