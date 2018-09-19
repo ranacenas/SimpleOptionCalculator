@@ -3,7 +3,31 @@
 com_base = 9.95 #Base commission
 com_per = 1.00 #Commission per contract
 numcon_pd = [1, 2, 4, 10] #Number of contracts
-profit_goals = [50, 100, 150, 200] #Money you want to make scenarios
+profit_goals = [50, 100, 150, 200] #amount of money you want to make scenarios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #DO NOT CHANGE
 def total_cost_of_trade(price, num_of_contracts):         #For options trading 
